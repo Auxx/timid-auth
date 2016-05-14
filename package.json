@@ -6,6 +6,10 @@
   "author": "Aleksandr 'Aux' Ivanov <aux@hexmode.org>",
   "homepage": "http://hexmode.org",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Auxx/timid-auth.git"
+  },
   "engines": {
     "node": ">= 4.4.4",
     "npm": ">= 3"
