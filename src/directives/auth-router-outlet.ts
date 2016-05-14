@@ -1,5 +1,6 @@
 import {ViewContainerRef, DynamicComponentLoader, Directive, Inject} from "@angular/core";
 import {Router, RouterOutlet, ComponentInstruction} from "@angular/router-deprecated";
+
 import {DefaultRedirect} from "../tokens/default-redirect";
 import {StateService} from "../services/state-service";
 import {User} from "../models/user";
