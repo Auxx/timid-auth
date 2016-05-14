@@ -1,0 +1,7 @@
+/.idea/
+*.iml
+
+/build/
+/node_modules/
+/typings/
+/dist/
