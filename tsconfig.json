@@ -13,6 +13,7 @@
     "node_modules"
   ],
   "files": [
+    "typings/browser.d.ts",
     "index.ts"
   ],
   "compileOnSave": false,
