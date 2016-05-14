@@ -1,0 +1,12 @@
+/.idea/
+*.iml
+
+/build/
+/node_modules/
+/typings/
+/dist/
+
+.gitignore
+tsconfig.json
+tslint.json
+typings.json
