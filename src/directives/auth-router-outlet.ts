@@ -12,11 +12,15 @@ import {User} from "../models/user";
  * ```typescript
  * @RouteConfig([
  *     ...
- *     {path: "/restricted-page", name: "RestrictedPage", component: RestrictedPageComponent, data: {restrictTo: ["USER_ROLE"]}},
+ *     {path: "/restricted-page", name: "RestrictedPage", component: RestrictedPageComponent, data: {restrictTo: ["USER_ROLE"], redirectTo: "[LoginPage]"}},
  * ])
  * ```
  * It is possible restrict to a single role passed as a string or multiple roles
- * passed as an array of strings.
+ * passed as an array of strings. The redirectTo key is optional.
+ *
+ * If current User is allowed to visit the route, default <router-outlet> implementation
+ * is invoked, otherwise the client is redirected to a URL specified by either redirectTo
+ * parameter in route data or to a DefaultRedirect provided by app configuration.
  *
  * Restricted routes are non-reusable.
  */
