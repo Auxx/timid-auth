@@ -5,6 +5,21 @@ import {DefaultRedirect} from "../tokens/default-redirect";
 import {StateService} from "../services/state-service";
 import {User} from "../models/user";
 
+/**
+ * Use this instead of Angular's <router-outlet> to handle role based access restrictions
+ * to specified routes. To configure access, add restrictTo key to the route data:
+ *
+ * ```typescript
+ * @RouteConfig([
+ *     ...
+ *     {path: "/restricted-page", name: "RestrictedPage", component: RestrictedPageComponent, data: {restrictTo: ["USER_ROLE"]}},
+ * ])
+ * ```
+ * It is possible restrict to a single role passed as a string or multiple roles
+ * passed as an array of strings.
+ *
+ * Restricted routes are non-reusable.
+ */
 @Directive({
     selector: "auth-router-outlet"
 })
@@ -46,8 +61,6 @@ export class AuthRouterOutlet extends RouterOutlet {
             let isAllowed: boolean = this.stateService.isLoggedIn;
 
             if (isAllowed) {
-                isAllowed = false;
-
                 let roles: string[] = [];
                 let restrictTo = data["restrictTo"];
 
