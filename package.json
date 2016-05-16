@@ -1,7 +1,7 @@
 {
   "name": "timid-auth",
   "version": "0.0.1",
-  "description": "timid-auth library fo Angular 2",
+  "description": "timid-auth library for Angular 2",
   "main": "index.ts",
   "author": "Aleksandr 'Aux' Ivanov <aux@hexmode.org>",
   "homepage": "http://hexmode.org",
